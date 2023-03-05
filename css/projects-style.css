@@ -1,0 +1,32 @@
+.projects-container {
+    color: var(--darkColor);
+    overflow: hidden;
+}
+
+.projects-list {
+    position: relative;
+    display: grid;
+    width: 100%;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    grid-template-columns: repeat(2, 30%);
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.projects-list .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.project a {
+    text-decoration: none;
+    align-self: flex-start;
+}
+
+.project h2 {
+    text-decoration: underline;
+    align-self: flex-start;
+}

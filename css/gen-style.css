@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: BigerOver;
+    src: url(../assets/fonts/BigerOver-ywyr3.ttf);
+}
+
+:root {
+    --lightColor: #ffffff;
+    --darkColor: #000000;
+    --defaultFont: BigerOver, Sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+.dark-btn {
+    background-color: var(--darkColor);
+    color: var(--lightColor);
+    padding: .5rem;
+    font-family: var(--defaultFont);
+    cursor: pointer;
+}
+
+.light-btn {
+    background-color: var(--lightColor);
+    color: var(--darkColor);
+    padding: .5rem;
+    font-family: var(--defaultFont);
+    cursor: pointer;
+}
+
+.light-bg-links {
+    text-decoration: none;
+    color: var(--darkColor);
+}
+
+.light-bg-links::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 0.15rem;
+    background-color: var(--darkColor);
+    transition: 0.25s ease-in-out;
+}
+
+.light-bg-links:hover::after {
+    content: '';
+    display: block;
+    height: 0.15rem;
+    width: 100%;
+    background-color: var(--darkColor);
+}
+
+.dark-bg-links {
+    text-decoration: none;
+    color: var(--lightColor);
+}
+
+.dark-bg-links::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 0.15rem;
+    background-color: var(--lightColor);
+    transition: 0.25s ease-in-out;
+}
+
+.dark-bg-links:hover::after {
+    content: '';
+    display: block;
+    height: 0.15rem;
+    width: 100%;
+    background-color: var(--lightColor);
+}
+
+.section {
+    height: 100vh;
+    width: 100%;
+    font-family: var(--defaultFont);
+    font-weight: lighter;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.1em;
+    height: 10vh;
+    cursor: pointer;
+}
+
+.next-btn {
+    position: sticky;
+    background: transparent;
+    border: none;
+    top: 50%;
+    right: 1%;
+    cursor: pointer;
+}
+
+.prev-btn {
+    position: sticky;
+    background: transparent;
+    border: none;
+    transform: rotate(-180deg);
+    top: 50%;
+    left: 1%;
+    cursor: pointer;
+}

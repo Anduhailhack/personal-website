@@ -1,0 +1,45 @@
+.bio-container {
+    color: var(--lightColor);
+    background-color: var(--darkColor);
+    overflow: hidden;
+}
+
+.bio-container .bio-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: calc(100% - 10vh);
+}
+
+.bio-container .bio-wrapper div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    align-items: center;
+    height: 100%;
+    font-size: 1.3em;
+}
+
+.bio-discription {
+    position: relative;
+}
+
+.profile-container {
+    position: relative;
+}
+
+.profile-container img {
+    object-fit: contain;
+    width: 10rem;
+    height: 10rem;
+    border: 2px solid var(--lightColor);
+    border-radius: 50%;
+}
+
+.bio-container .bio-wrapper .bio-discription  p{
+    align-self: flex-start;
+    width: 30rem;
+    line-height: 1.5rem;
+}
